@@ -15,10 +15,10 @@
 
 <div class="card">
     <div class="card-body">
-        <div class="container">
-            <div class="row mt-5">
+        <div class="container mt-5">
+            <div class="row">
                 <h2 class="card-header mb-2">Sensor Data</h2>
-                <table class="table">
+                <table class="table table-bordered mb-5">
                     @if($sensorData)
                         <thead>
                         <tr>
@@ -44,6 +44,11 @@
                         @endforeach
                     @endif
                 </table>
+
+                <div class="pagination d-flex justify-content-center">
+                    {{$sensorData->links()}}
+                </div>
+
             </div>
         </div>
     </div>

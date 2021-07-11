@@ -22,8 +22,7 @@ class TblIotSensorsController extends Controller
 
     public function viewSensor()
     {
-
-        $mSensorDataToView = tbl_iot_sensors::all();
+        $mSensorDataToView = tbl_iot_sensors::paginate(15);
         return view('Index', [
             'sensorData' => $mSensorDataToView
         ]);
